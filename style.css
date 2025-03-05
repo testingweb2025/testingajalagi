@@ -1,0 +1,484 @@
+/* Global Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Info Bar */
+.info-bar {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    top: 0;
+    z-index: 1000;
+}
+
+.info-bar .info-text {
+    flex-grow: 1;
+}
+
+.whatsapp-link {
+    text-decoration: none;
+    color: #25D366;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.whatsapp-link i {
+    font-size: 16px;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+    color: #1EBE56;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Nav Links */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Carousel */
+/* Carousel */
+.carousel-item {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Menghilangkan tanda panah navigasi */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none !important;
+}
+
+/* Caption Styling */
+.carousel-caption {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: translateY(-30%);
+    text-align: right;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    max-width: 350px;
+}
+
+.carousel-item.active .carousel-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.carousel-caption .btn {
+    background-color: #ff5733;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.5s ease-in-out, opacity 0.5s ease-out;
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.carousel-item.active .carousel-caption .btn {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #c13b1b;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+/* Product Gallery */
+.product-gallery {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.product-info {
+    padding: 15px 0;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #777;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: #c13b1b;
+    transform: scale(1.1);
+}
+
+/* Hover Effects */
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 0; /* Hapus jarak bawah */
+}
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#contact h2:hover {
+    color: #007BFF;
+    transform: scale(1.05);
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-media-links .cta-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-media-links .cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333232;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: -5px;
+}
+
+/* Responsive Contact & Footer */
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 15px;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .social-media-links {
+        justify-content: center;
+        flex-wrap: wrap; /* Tetap horizontal, tetapi bisa pindah baris jika layar terlalu kecil */
+    }
+
+    .social-media-links .cta-button {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 30px 10px;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-media-links {
+        justify-content: center; 
+        flex-wrap: wrap; /* Tetap horizontal di layar kecil */
+        gap: 10px;
+    }
+
+    .social-media-links .cta-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
+    }
+
+    .product-item img {
+        height: 180px;
+    }
+
+    .shop-now-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .info-bar {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .whatsapp-link {
+        font-size: 14px;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 15px;
+    }
+
+    .logo-container {
+        margin-left: 20px;
+    }
+
+    .carousel-caption {
+        top: 25%;
+        right: 5%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        height: 35vh;
+    }
+
+    .carousel-caption {
+        top: 20%;
+        right: 5%;
+        text-align: right;
+        max-width: 250px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    .carousel-caption .btn {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+
+    .info-bar {
+        font-size: 12px;
+        padding: 6px 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .whatsapp-link {
+        margin-top: 5px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hamburger {
+        margin-right: 10px;
+    }
+
+    .logo-container {
+        margin-left: 15px;
+    }
+}
